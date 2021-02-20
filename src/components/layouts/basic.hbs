@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="main.css"/>
+  {{#if page_title}}
+    <title>{{page_title}}</title>
+  {{else}}
+    <title>{{site_title}}</title>
+  {{/if}}
+</head>
+
+<body class="min-h-screen flex flex-col">
+  <header>
+    {{#> header-block}}
+      {{> nav/navbar}}
+    {{/header-block}}
+  </header>
+  <main class="w-full">
+    {{#> main-block }}
+
+    {{/main-block}}
+  </main>
+  <footer>
+    {{> footer/footer}}
+  </footer>
+  <script src="bundle.js"></script>
+  {{#> scripts-block}}
+  {{/scripts-block}}
+</body>
+
+</html>
